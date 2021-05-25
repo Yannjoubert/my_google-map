@@ -1,6 +1,6 @@
 # my_google-map
 
-A simple google-map using mapbox. There is a zoom option on the map, a special point at Epitech Saint-André and a search bar.
+A simple google-map using mapbox. There is a zoom option on the map, a special point at Epitech <Saint-André La Réunion> and a search bar.
 
 # Usage
 
