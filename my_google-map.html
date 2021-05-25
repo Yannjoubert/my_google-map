@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css'
+    type='text/css' />
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id='map' style='width: 1900px; height: 950px;'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoieWFubmpidCIsImEiOiJja2wwZ3FzbmQwN29tMnVvNDhwcWw1dXVkIn0.KURoFK72-My9x1bOUboIRw';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11'
+    });
+    // Add a market at a specific place (epitech)
+    var marker = new mapboxgl.Marker()
+    .setLngLat([55.6591651,-20.9650818])
+    .addTo(map);
+    // Activate the geocoder to search a place
+    var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl, // set the mapbox-gl instance
+    marker: false, // do not use the default marker style
+    });
+    map.addControl(geocoder);
+    // Add the zoom option
+    /* google-chrome ./index.html */
+    map.addControl(new mapboxgl.NavigationControl());
+</script>
+</body>
+</html>
+
