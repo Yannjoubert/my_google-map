@@ -8,3 +8,7 @@ A simple google-map using mapbox. There is a zoom option on the map, a special p
 * Or put the file in your search bar.
 
 * Exemple "google-chrome ./my_google-map.html"
+
+# Example
+
+![Alt Text]()
